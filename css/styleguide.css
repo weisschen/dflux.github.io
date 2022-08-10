@@ -1,0 +1,32 @@
+:root { 
+  --azure-radiance: #0084ff;
+  --black: #000000;
+  --eerie-black: #181818;
+  --midnight: #000c2d;
+  --white: #ffffff;
+ 
+  --font-size-l: 18px;
+  --font-size-m: 16px;
+  --font-size-s: 14px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 28px;
+  --font-size-xxxl: 48px;
+ 
+  --font-family-encode_sans: "Encode Sans", Helvetica;
+  --font-family-roboto: "Roboto", Helvetica;
+}
+.roboto-bold-eerie-black-28px {
+  color: var(--eerie-black);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.roboto-black-midnight-16px {
+  color: var(--midnight);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 900;
+}
