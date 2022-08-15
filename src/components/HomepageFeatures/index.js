@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Distributed Architecture',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/distributed_arch.svg').default,
     description: (
       <>
         allows the platform to scale horizontally up to millions of emulated subscribers and devices 
@@ -15,7 +15,7 @@ const FeatureList = [
   },
   {
     title: 'Developer Friendly',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/dev_friendly.svg').default,
     description: (
       <>
         provides the best in class yet easy to use functional, performance and security test options to service providers, interoperable system’s vendors and individual contributors.
@@ -24,7 +24,7 @@ const FeatureList = [
   },
   {
     title: 'CI/CT/CD Driven',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/automation.svg').default,
     description: (
       <>
          Vast integrations to CI tools without the need for protocol expertise creates robust capabillities 
