@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Dflux',
   tagline: 'Cloud-Native Test Automation Platform For 5G Core Network',
-  url: 'https://dflux.io',
+  url: 'https://weisschen.github.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
