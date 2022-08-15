@@ -4,6 +4,8 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import Basic from '@site/src/components/ContactForm';
+
 
 
 import styles from './index.module.css';
@@ -39,6 +41,9 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <div className={styles.forms}>
+        <p>  <Basic /></p>
+        </div>
       </main>
     </Layout>
   );

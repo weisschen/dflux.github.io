@@ -1,5 +1,6 @@
 import React from 'react';
  import { Formik } from 'formik';
+
  import styles from './styles.module.css';
 
  
@@ -38,7 +39,10 @@ import React from 'react';
          /* and other goodies */
        }) => (
          <form onSubmit={handleSubmit}>
+            <div>
+            <br></br>
            <input
+            class={styles.mailInput}
              type="email"
              name="email"
              placeholder="Enter your email"
@@ -47,9 +51,13 @@ import React from 'react';
              value={values.email}
            />
            {errors.email && touched.email && errors.email}
-           <button type="submit" disabled={isSubmitting}>
+           </div>
+           <br></br>
+           <div>
+           <button class="button button--outline button--primary button--lg" type="submit" disabled={isSubmitting}>
              Submit
            </button>
+           </div>
          </form>
        )}
      </Formik>
