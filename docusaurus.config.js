@@ -7,8 +7,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Dflux',
-  tagline: 'Cloud-Native Test Automation Platform For 3G/4G/5G Core Network',
-  url: 'https://your-docusaurus-test-site.com',
+  tagline: 'Cloud-Native Test Automation Platform For 5G Core Network',
+  url: 'https://dflux.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
