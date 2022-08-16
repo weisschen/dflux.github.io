@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/distributed_arch.svg').default,
     description: (
       <>
-        allows the platform to scale horizontally up to millions of emulated subscribers and devices 
+        Auto horizontal scaling up to millions of emulated subscribers and devices 
         at rates of tens of thousands of events per second and traffic of Gigabits per second.
       </>
     ),
@@ -18,7 +18,8 @@ const FeatureList = [
     Svg: require('@site/static/img/dev_friendly.svg').default,
     description: (
       <>
-        provides the best in class yet easy to use functional, performance and security test options to service providers, interoperable system’s vendors and individual contributors.
+        For Engineers, by Engineers.
+        Provides the best in class yet easy to use functional, performance and security test options for 5G core network.
       </>
     ),
   },
@@ -27,8 +28,10 @@ const FeatureList = [
     Svg: require('@site/static/img/automation.svg').default,
     description: (
       <>
-         Vast integrations to CI tools without the need for protocol expertise creates robust capabillities 
-         for customizing every detail in tests of complex flows and scenarios and their correspondent metrics, automatically.
+         Vast integrations with popular CI tools. 
+         Elimintaing the need for protocol expertise while maintaining robust capabillities 
+         for customization options of every detail in tests of complex flows and scenarios and their correspondent metrics,
+          automatically.
       </>
     ),
   },
