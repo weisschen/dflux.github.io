@@ -1,8 +1,10 @@
 import React from 'react';
- import { Formik } from 'formik';
+import { Formik } from 'formik';
+import styles from './styles.module.css';
 
- import styles from './styles.module.css';
 
+ var Airtable = require('airtable');
+ var base = new Airtable({apiKey: process.env.AIRTABLE_API_KEY}).base(process.env.AIRTABLE_BASE_ID);
  
  const Basic = () => (
    <div className="contactForm">
@@ -20,11 +22,42 @@ import React from 'react';
          }
          return errors;
        }}
-       onSubmit={(values, { setSubmitting }) => {
+       onSubmit={(values, { setSubmitting, setStatus, resetForm }) => {
          setTimeout(() => {
-           alert(JSON.stringify(values, null, 2));
-           //TODO: handle value write
+           base('mail_list').create([
+            {
+              "fields": {
+                "mail": values.email,
+                "timestamp": Date.now()
+              }
+            }
+          ], function(err, records) {
+            if (err) {
+              console.error(err);
+              resetForm()
+              setStatus({
+                sent: false,
+                msg: `Error! Please try again later.`
+              })
+              return;
+            }
+            records.forEach(function (record) {
+              console.log("new registration, airtable Id:" + record.getId());
+              resetForm()
+              setStatus({
+                sent: true,
+                msg: "Message has been sent! Thanks!"
+              });
+            });
+          });
            setSubmitting(false);
+           setTimeout(
+            () => setStatus({
+              sent: '',
+              msg: ""
+            }), 
+            3000
+          );
          }, 400);
        }}
      >
@@ -36,6 +69,7 @@ import React from 'react';
          handleBlur,
          handleSubmit,
          isSubmitting,
+         status
          /* and other goodies */
        }) => (
          <form onSubmit={handleSubmit}>
@@ -54,8 +88,17 @@ import React from 'react';
            </div>
            <br></br>
            <div>
+           {status && status.msg && (
+              <p
+                className={`{styles.alert} ${
+                  status.sent ? styles.alertSuccess : styles.alertError
+                }`}
+              >
+                {status.msg}
+              </p>
+            )}
            <button class="button button--outline button--primary button--lg" type="submit" disabled={isSubmitting}>
-             Submit
+             Submit {isSubmitting && <span>Sending...</span>}
            </button>
            </div>
          </form>
