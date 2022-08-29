@@ -84,7 +84,10 @@ import styles from './styles.module.css';
              onBlur={handleBlur}
              value={values.email}
            />
-           {errors.email && touched.email && errors.email}
+                      <br></br>
+           {errors.email && touched.email && (
+            <div className={styles.errorMail}>{errors.email}</div>
+          )}
            </div>
            <br></br>
            <div>
@@ -97,7 +100,7 @@ import styles from './styles.module.css';
                 {status.msg}
               </p>
             )}
-           <button class="button button--outline button--primary button--lg" type="submit" disabled={isSubmitting}>
+           <button class={styles.buttons} type="submit" disabled={isSubmitting}>
              Submit {isSubmitting && <span>Sending...</span>}
            </button>
            </div>
