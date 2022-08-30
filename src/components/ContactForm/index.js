@@ -56,7 +56,7 @@ const Basic = () => (
               sent: '',
               msg: ""
             }),
-            3000
+            5000
           );
         }, 400);
       }}
@@ -99,7 +99,7 @@ const Basic = () => (
                 {status.msg}
               </p>
             )}
-            <button class={styles.buttons} type="submit" disabled={isSubmitting}>
+            <button class={`button ${styles.buttons}`} type="submit" disabled={isSubmitting}>
               Submit {isSubmitting && <span>Sending...</span>}
             </button>
           </div>
